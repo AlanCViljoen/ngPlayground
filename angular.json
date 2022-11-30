@@ -63,6 +63,12 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          // Add below to serve the app over SSL
+          "options": {
+            "browserTarget": "frontend:build",
+            "ssl": true
+          },
+          // 
           "configurations": {
             "production": {
               "browserTarget": "ngPlayground:build:production"
